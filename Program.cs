@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProjetoUd1.Data;
+using ProjetoUd1.Models;
+using ProjetoUd1.Services;
 namespace ProjetoUd1
 {
     public class Program
@@ -14,6 +16,7 @@ namespace ProjetoUd1
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddScoped<SeedingService>();
+            builder.Services.AddScoped<SellerService>();
 
             var app = builder.Build();
 
